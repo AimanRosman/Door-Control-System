@@ -1,6 +1,6 @@
 # 3 mini project with Raspberry Pi Pico using CircuitPython
 
-# Weather Monitoring
+# Temperature and Humidity Monitoring
 ![WhatsApp Image 2024-11-19 at 14 53 16_8bb28bc8](https://github.com/user-attachments/assets/1bd40e2e-4f84-4e8c-8478-6f6daea0d11d)
 ## Components
 Raspberry Pi Pico <br />
