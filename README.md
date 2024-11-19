@@ -12,9 +12,9 @@ The reading of temperature and humidity will be display on oled and if the tempe
 
 # Safe Lock System
 ## Safe locked
-![lock before](https://github.com/user-attachments/assets/512e0dbd-7925-4636-992e-f79976b2ede9)
-## Safe violated
 ![lock after](https://github.com/user-attachments/assets/c9a2965e-9945-4fcd-9a71-5edf5309c378)
+## Safe violated
+![lock before](https://github.com/user-attachments/assets/512e0dbd-7925-4636-992e-f79976b2ede9)
 ## Components
 Raspberry Pi Pico <br />
 Oled 128x32 <br />
