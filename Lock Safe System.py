@@ -5,14 +5,14 @@ import digitalio  # For controlling digital input/output pins
 import busio  # For I2C communication
 from adafruit_ssd1306 import SSD1306_I2C  # OLED display library
 
-# Initialize PIR (Passive Infrared) motion sensor
-# The PIR sensor detects motion and outputs a HIGH signal when triggered.
-pir_sensor = digitalio.DigitalInOut(board.GP2)
-pir_sensor.direction = digitalio.Direction.INPUT  # Set PIR sensor as an input
+# Initialize IR sensor
+# The IR sensor detects objects (e.g., a person or object crossing the sensor) and outputs a LOW signal when triggered.
+ir_sensor = digitalio.DigitalInOut(board.GP2)  # Change this pin if needed
+ir_sensor.direction = digitalio.Direction.INPUT  # Set IR sensor as an input
 
 # Initialize the buzzer
 # The buzzer provides an alert sound when motion is detected.
-buzzer = digitalio.DigitalInOut(board.GP3)
+buzzer = digitalio.DigitalInOut(board.GP3)  # Change this pin if needed
 buzzer.direction = digitalio.Direction.OUTPUT  # Set buzzer as an output
 
 # Initialize the OLED display
@@ -39,10 +39,10 @@ while True:
         # Display the system name or identifier at the top of the OLED
         display.text(name, 0, 0, 1)
 
-        # Check if the PIR sensor detects motion
-        if pir_sensor.value:  # Motion detected (PIR sensor output HIGH)
+        # Check if the IR sensor detects an object
+        if ir_sensor.value:  # No object detected (IR sensor output HIGH)
             if not motion_detected:  # Only trigger on the first detection in a burst
-                print("Motion Detected!")  # Log the detection in terminal
+                print("Safe Intruded!")  # Log the detection in terminal
                 motion_detected = True   # Set flag to track motion burst
                 motion_counter += 1      # Increment the motion counter
 
@@ -59,7 +59,7 @@ while True:
 
         else:
             if motion_detected:  # Reset if motion is no longer detected
-                print("No Motion Detected")  # Log to terminal
+                print("Safe Locked")  # Log to terminal
                 motion_detected = False  # Clear flag to allow new detections
 
             # Display messages for no motion detected, showing door closed and counter
@@ -67,9 +67,9 @@ while True:
             display.text("Opened: {}".format(motion_counter), 0, 20, 1)  # Display counter
             display.show()  # Update OLED display with current status
 
-    # Error handling in case of issues with the PIR sensor
+    # Error handling in case of issues with the IR sensor
     except RuntimeError as e:
-        print("Error reading PIR sensor: {}".format(e.args))  # Log error to terminal
+        print("Error reading IR sensor: {}".format(e.args))  # Log error to terminal
         display.fill(0)  # Clear display
         display.text("Error: {}".format(e.args[0]), 0, 0, 1)  # Show error message on OLED
         display.show()  # Update display with error message
