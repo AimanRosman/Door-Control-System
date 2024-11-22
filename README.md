@@ -1,7 +1,7 @@
 # 3 mini project with Raspberry Pi Pico using CircuitPython
 
-# Raspberry Pi Pico W
-![Raspberry_pi_pico_w_pinout-1-1536x864](https://github.com/user-attachments/assets/ecf73dbf-0255-44af-b6a5-df3b1ac57800)
+# Raspberry Pi Pico 
+![pico-pinout](https://github.com/user-attachments/assets/ab6dae48-6632-4d50-85aa-125d3403c244)
 
 # Temperature and Humidity Monitoring
 ![WhatsApp Image 2024-11-19 at 14 53 16_8bb28bc8](https://github.com/user-attachments/assets/1bd40e2e-4f84-4e8c-8478-6f6daea0d11d)
@@ -10,7 +10,7 @@
 Raspberry Pi Pico <br />
 Oled 128x32 <br />
 Buzzer <br />
-DHT 11 Temperature and Humidity Sensor <br />
+DHT11 Temperature and Humidity Sensor <br />
 
 ## Diagram
 ![image](https://github.com/user-attachments/assets/f6d01ea4-e9c1-41b9-8faa-11be9143ea10)
@@ -22,7 +22,7 @@ SDA -> GP0 <br />
 ## Buzzer
 Positive -> GP3 <br />
 GND -> GND <br />
-## DHT11
+## DHT11 Sensor
 VCC -> 3.3V <br />
 GND -> GND <br />
 OUTPUT -> GP2<br />
