@@ -82,15 +82,14 @@ SDA -> GP0 <br />
 Positive -> GP3 <br />
 GND -> GND <br />
 ## Push Button
-VCC -> 3.3V <br />
 GND -> GND <br />
 OUTPUT -> GP2<br />
 ## Servo Motor
-VCC -> VSYS <br />
+VCC -> 3.3V <br />
 GND -> GND <br />
 OUTPUT -> GP4 <br />
 ## Ultrasonic Sensor
-VCC -> 3.3V <br />
+VCC -> VSYS <br />
 GND -> GND <br />
 TRIGGER -> GP21 <br />
 ECHO -> GP20 <br />
